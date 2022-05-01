@@ -1,14 +1,11 @@
 import axios from "axios"
 
-const getAll =()=>{
-    axios.get("https://fakestoreapi.com/products")
-    .then(response => {
-        return {
+const getAll = () => async(dispatch)=>{
+    const response = await axios.get("https://fakestoreapi.com/products")
+        dispatch({
             type: "GET_ALL",
             payload: response.data
-        }
-        }
-    )
+            })   
 }
 const add = (payload)=>{
     return {
