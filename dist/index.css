@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: "roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -35,6 +36,13 @@ header .header-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card-product .btn {
+  padding: 10px;
+  background-color: #4b43df;
+  color: aliceblue;
+  border-radius: 6px;
 }
 
 footer {
@@ -95,6 +103,13 @@ footer a {
           justify-content: center;
   height: 100vh;
   width: 100%;
+  font-size: 4em;
+  -webkit-animation: carga;
+          animation: carga;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .loading .pelotita:nth-child(odd) {
@@ -118,40 +133,45 @@ footer a {
 
 @-webkit-keyframes carga {
   10% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
   }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
   75% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: rotate(250deg);
+            transform: rotate(250deg);
   }
 }
 
 @keyframes carga {
   10% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
   }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
   75% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: rotate(250deg);
+            transform: rotate(250deg);
   }
+}
+
+.select {
+  padding: 10px;
+  font-size: 1.3em;
 }
 
 .hero {
@@ -228,5 +248,53 @@ footer a {
 
 .card-product img {
   width: 200px;
+}
+
+.slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.slider-container .hero-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  height: 250px;
+}
+
+.slider-container .hero-card .card-contend h2 {
+  font-size: 1.2em;
+}
+
+.slider-container img {
+  width: 60%;
+  max-width: 200px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.selector {
+  font-size: 2em;
 }
 /*# sourceMappingURL=index.css.map */
