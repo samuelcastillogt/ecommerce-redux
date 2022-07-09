@@ -1,11 +1,9 @@
 import React from 'react';
-
+import {BiLoaderCircle} from "react-icons/bi"
 const Loading = () => {
     return (
         <div className="loading">
-            <div className="pelotita"></div>
-            <div className="pelotita"></div>
-            <div className="pelotita"></div>
+            <BiLoaderCircle />
         </div>
     );
 };

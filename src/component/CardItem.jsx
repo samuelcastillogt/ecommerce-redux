@@ -10,7 +10,7 @@ const CardItem = (props) => {
             <img src={props.image} alt="" />
             <p className='title-card'>{props.title}</p>
             <p className='price'>Precio: Q.{props.price}</p>
-            <button onClick={()=>{
+            <button className='btn' onClick={()=>{
                 dispatch(add(props))
             }}>Agregar al carrito</button>
             </div>

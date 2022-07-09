@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: "roboto";
+    font-family: 'Roboto', sans-serif;
 }
 header{
     display: flex;
@@ -19,6 +20,13 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .btn{
+        padding: 10px;
+        background-color:#4b43df;
+        color: aliceblue;
+        border-radius: 6px;
+
+    }
 }
 footer{
     text-align: center;
@@ -58,6 +66,10 @@ footer{
     justify-content: center;
     height: 100vh;
     width: 100%;
+    font-size: 4em;
+    animation: carga;
+    animation-duration: 1s;
+        animation-iteration-count: infinite;
     .pelotita:nth-child(odd) {
         animation-delay: 1s;
     }
@@ -74,10 +86,14 @@ footer{
         }
 }
 @keyframes carga {
-    10%{transform: scale(1);}
-    50%{transform: scale(1.3);}
-    75%{transform: scale(1.5);}
-    100%{transform: scale(1);}
+    10%{transform: rotate(50deg);}
+    50%{transform: rotate(80deg);}
+    75%{transform: rotate(160deg);}
+    100%{transform: rotate(250deg);}
+}
+.select{
+    padding: 10px;
+    font-size: 1.3em;
 }
 .hero{
     width: 90%;
@@ -124,4 +140,34 @@ footer{
     img{
         width: 200px;
     }
+}
+.slider-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    .hero-card{
+        display: flex;
+        width: 400px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        height: 250px;
+        .card-contend{
+            h2{
+                font-size: 1.2em;
+            }
+        }
+    }
+    img{
+        width: 60%;
+        max-width: 200px;
+    }
+}
+.slider{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.selector{
+    font-size: 2em;
 }
